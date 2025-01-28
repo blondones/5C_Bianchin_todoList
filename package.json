@@ -17,6 +17,9 @@
   "homepage": "https://github.com/blondones/5C_Bianchin_todoList#readme",
   "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "http": "^0.0.1-security",
+    "path": "^0.12.7"
   }
 }
