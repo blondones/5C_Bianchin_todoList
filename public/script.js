@@ -64,19 +64,31 @@ const load = () => {
   });
 };
 
-insertButton.onclick = () => {
-  const todo = {          
-    name: todoInput.value,
-    completed: false
-  };      
 
-  send({todo: todo})
-    .then(() => load())
-    .then((json) => { 
-      todos = json.todos;
-      todoInput.value = "";
-      render(); 
-  });
+const errorMessage = document.getElementById('error-message');
+
+insertButton.onclick = () => {
+    const todoName = todoInput.value.trim();
+
+    if (todoName === '') {
+        errorMessage.style.display = 'block';
+        return;
+    } else {
+        errorMessage.style.display = 'none';
+    }
+
+    const todo = {          
+        name: todoName,
+        completed: false
+    };      
+
+    send({todo: todo})
+        .then(() => load())
+        .then((json) => { 
+            todos = json.todos;
+            todoInput.value = "";
+            render(); 
+        });
 };
 
 load().then((json) => {
