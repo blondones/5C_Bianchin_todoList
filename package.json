@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,11 +16,13 @@
     "url": "https://github.com/blondones/5C_Bianchin_todoList/issues"
   },
   "homepage": "https://github.com/blondones/5C_Bianchin_todoList#readme",
-  "description": "",
   "dependencies": {
     "body-parser": "^1.20.3",
     "express": "^4.21.2",
     "http": "^0.0.1-security",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.12.0",
     "path": "^0.12.7"
-  }
+  },
+  "description": ""
 }
