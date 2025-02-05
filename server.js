@@ -40,7 +40,7 @@ app.put("/todo/complete", (req, res) => {
     .then(todos => {
       todos.map((element) => {
       if (element.id === todo.id) {
-        element.completed = true;
+        element.completed = !element.completed;
         update(element);
       }
 
